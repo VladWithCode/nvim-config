@@ -17,4 +17,7 @@ vim.keymap.set("n", "<leader>vwm", function() require("vim-with-me").StartVimWit
 vim.keymap.set("n", "<leader>svwm", function() require("vim-with-me").StopVimWithMe() end)
 
 vim.keymap.set("x", "<leader>p", "\"_dP")
-vim.keymap.set("n", "<leader>w", vim.cmd("up"))
+
+vim.keymap.set("n", "<C-c>", "<Esc>")
+vim.keymap.set("n", "<leader>w", vim.cmd.up)
+
