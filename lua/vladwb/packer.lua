@@ -29,6 +29,8 @@ return require('packer').startup(function(use)
 	  end
   })
 
+  use {"akinsho/horizon.nvim", tag = "*"}
+
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
 
   use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
@@ -63,4 +65,6 @@ return require('packer').startup(function(use)
   }
 
   use "tpope/vim-fugitive"
+  use("fatih/vim-go", { run = ":GoUpdateBinaries" })
+  use "tpope/vim-surround"
 end)
