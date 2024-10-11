@@ -21,3 +21,10 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<leader>w", vim.cmd.up)
 
+-- Oil.nvim
+-- Open parent directory in current window
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- Open parent directory in floating window
+vim.keymap.set("n", "<leader>-", require("oil").toggle_float)
+
