@@ -1,6 +1,8 @@
 function ColorMyPencils(color)
-	color = color or "horizon"
-	vim.cmd.colorscheme(color)
+    if color ~= "" then
+        color = color or "horizon"
+        vim.cmd.colorscheme(color)
+    end
 
     vim.o.background = "dark"
 
