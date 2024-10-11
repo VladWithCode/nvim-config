@@ -67,4 +67,9 @@ return require('packer').startup(function(use)
   use "tpope/vim-fugitive"
   use("fatih/vim-go", { run = ":GoUpdateBinaries" })
   use "tpope/vim-surround"
+
+  use {
+      "stevearc/oil.nvim",
+      requires = { "nvim-tree/nvim-web-devicons" },
+  }
 end)
