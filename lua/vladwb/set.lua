@@ -26,3 +26,5 @@ vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
+vim.opt.termguicolors = true
+

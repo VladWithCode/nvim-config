@@ -72,4 +72,7 @@ return require('packer').startup(function(use)
         "stevearc/oil.nvim",
         requires = { "nvim-tree/nvim-web-devicons" },
     }
+
+    use "lewis6991/gitsigns.nvim"
+    use "freddiehaddad/feline.nvim"
 end)
