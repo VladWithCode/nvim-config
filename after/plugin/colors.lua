@@ -1,6 +1,6 @@
 function ColorMyPencils(color)
     if color ~= "" then
-        color = color or "horizon"
+        color = color or "tokyonight"
         vim.cmd.colorscheme(color)
     end
 
