@@ -75,4 +75,7 @@ return require('packer').startup(function(use)
 
     use "lewis6991/gitsigns.nvim"
     use "freddiehaddad/feline.nvim"
+
+    -- Syntax highlight for kitty
+    use "fladson/vim-kitty"
 end)
