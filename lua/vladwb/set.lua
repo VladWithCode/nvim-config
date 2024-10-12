@@ -28,3 +28,6 @@ vim.g.mapleader = " "
 
 vim.opt.termguicolors = true
 
+-- inccommand
+vim.opt.inccommand = "split"
+
