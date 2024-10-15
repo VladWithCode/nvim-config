@@ -31,3 +31,16 @@ vim.opt.termguicolors = true
 -- inccommand
 vim.opt.inccommand = "split"
 
+-- fix wayland incompatible with "*y yank command
+vim.g.clipboard = {
+  name = 'wl-copy',
+  copy = {
+    ['+'] = 'wl-copy',
+    ['*'] = 'wl-copy',
+  },
+  paste = {
+    ['+'] = 'wl-paste',
+    ['*'] = 'wl-paste',
+  },
+  cache_enabled = 0,
+}
