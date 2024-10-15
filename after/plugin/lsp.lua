@@ -46,3 +46,18 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping.complete(),
     }),
 })
+
+-- Fixes snippets not loading for golang
+require('lspconfig').gopls.setup({
+    capabilities = require('cmp_nvim_lsp').default_capabilities(),
+    settings = {
+        gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+            analyses = {
+                unusedparams = true,
+            },
+            staticcheck = true,
+        }
+    }
+})
