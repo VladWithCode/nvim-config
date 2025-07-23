@@ -1,4 +1,4 @@
-local feline = require('feline')
+--[[local feline = require('feline')
 local vi_mode = require('feline.providers.vi_mode')
 local file = require('feline.providers.file')
 
@@ -224,3 +224,4 @@ local opts = {
 
 feline.setup(opts)
 feline.use_theme(theme)
+]]

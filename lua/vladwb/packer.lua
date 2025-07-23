@@ -8,59 +8,48 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.5',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
+    use {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'make'
     }
 
-    use ({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
-    })
+    use { "akinsho/horizon.nvim", tag = "*" }
 
-    use ({
-        'folke/tokyonight.nvim',
-        lazy = false,
-        priority = 1000,
-        config = function()
-            vim.cmd('colorscheme tokyonight')
-        end
-    })
-
-    use {"akinsho/horizon.nvim", tag = "*"}
-
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
     use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
     use {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
-        requires = { {"nvim-lua/plenary.nvim"} }
+        requires = { { "nvim-lua/plenary.nvim" } }
     }
 
     use "mbbill/undotree"
 
-    use{
+    use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+            { 'neovim/nvim-lspconfig' },
+            { 'williamboman/mason.nvim' },
+            { 'williamboman/mason-lspconfig.nvim' },
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-buffer' },
+            { 'hrsh7th/cmp-path' },
+            { 'saadparwaiz1/cmp_luasnip' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'hrsh7th/cmp-nvim-lua' },
+            -- Supermaven
+            { "supermaven-inc/supermaven-nvim" },
 
             -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
+            { 'L3MON4D3/LuaSnip' },
+            { 'rafamadriz/friendly-snippets' },
         }
     }
 
@@ -74,8 +63,31 @@ return require('packer').startup(function(use)
     }
 
     use "lewis6991/gitsigns.nvim"
-    use "freddiehaddad/feline.nvim"
+
+    -- use "freddiehaddad/feline.nvim"
 
     -- Syntax highlight for kitty
     use "fladson/vim-kitty"
+
+    -- Themes:
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+    })
+
+    use({
+        'folke/tokyonight.nvim',
+        lazy = false,
+        priority = 1000,
+    })
+
+    use({
+        "catppuccin/nvim",
+        as = "catppuccin",
+    })
+
+    use({
+        "vague2k/vague.nvim",
+        as = "vague",
+    })
 end)
