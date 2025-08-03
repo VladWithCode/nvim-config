@@ -1,7 +1,5 @@
+-- TODO: should i keep this?
 vim.keymap.set("n", "<Space>", "<Nop>", { silent = true })
-vim.g.mapleader = " "
-
--- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -13,11 +11,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", '"_dP')
 
 vim.keymap.set("n", "<C-c>", "<Esc>")
-vim.keymap.set("n", "<M-e>", "ge")
-vim.keymap.set("n", "<M-E>", "gE")
 vim.keymap.set("n", "<leader>w", vim.cmd.up)
 
 -- Oil.nvim
@@ -27,3 +23,4 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- Open parent directory in floating window
 vim.keymap.set("n", "<leader>-", require("oil").toggle_float)
 
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })

@@ -1,1 +1,1 @@
-require("vladwb")
+require("config")

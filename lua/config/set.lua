@@ -13,8 +13,7 @@ vim.opt.undofile = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-
-vim.opt.termguicolors = true
+vim.opt.inccommand = "split"
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -23,24 +22,12 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
-
-vim.g.mapleader = " "
-
+vim.opt.cursorline = true
 vim.opt.termguicolors = true
+vim.g.have_nerd_font = true
 
--- inccommand
-vim.opt.inccommand = "split"
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
--- fix wayland incompatible with "*y yank command
-vim.g.clipboard = {
-  name = 'wl-copy',
-  copy = {
-    ['+'] = 'wl-copy',
-    ['*'] = 'wl-copy',
-  },
-  paste = {
-    ['+'] = 'wl-paste',
-    ['*'] = 'wl-paste',
-  },
-  cache_enabled = 0,
-}
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
