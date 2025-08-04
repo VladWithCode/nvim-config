@@ -122,6 +122,7 @@ return {
 					end
 
 					map("K", vim.lsp.buf.hover, "")
+					map("gd", vim.lsp.buf.definition, "[G]oto [D]efinition")
 					map("gr", builtin.lsp_references, "[G]oto [R]eferences")
 					map("gI", builtin.lsp_implementations, "[G]oto [I]mplementation")
 					map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
