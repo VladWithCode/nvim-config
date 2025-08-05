@@ -126,7 +126,7 @@ return {
 					map("gr", builtin.lsp_references, "[G]oto [R]eferences")
 					map("gI", builtin.lsp_implementations, "[G]oto [I]mplementation")
 					map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-					map("<leader>ws", builtin.lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbol")
+					map("<leader>vs", builtin.lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbol")
 					map("<leader>vd", vim.diagnostic.open_float, "Open diagnostics in float window")
 					map("[d", vim.diagnostic.get_next, "Next diagnostic")
 					map("]d", vim.diagnostic.get_prev, "Prev diagnostic")
