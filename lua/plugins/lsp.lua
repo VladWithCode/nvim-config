@@ -50,7 +50,7 @@ return {
 		dependencies = {
 			{ "williamboman/mason.nvim", opts = {} },
 			"williamboman/mason-lspconfig.nvim",
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 			"j-hui/fidget.nvim",
 
 			"saghen/blink.cmp",
@@ -71,8 +71,9 @@ return {
 		},
 		config = function()
 			vim.api.nvim_create_autocmd("LspAttach", {
-				group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
+				group = vim.api.nvim_create_augroup("csg-lsp-attach", { clear = true }),
 				callback = function(event)
+					local builtin = require("telescope.builtin")
 					local map = function(keys, func, desc, mode)
 						mode = mode or "n"
 						vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
@@ -357,7 +358,6 @@ return {
 -- 		"williamboman/mason.nvim",
 -- 	},
 -- 	config = function()
--- 		local builtin = require("telescope.builtin")
 --
 -- 		vim.api.nvim_create_autocmd("LspAttach", {
 -- 			group = vim.api.nvim_create_augroup("vwb-lsp-attach", { clear = true }),
