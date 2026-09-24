@@ -1,7 +1,7 @@
 return {
     { 
         'rose-pine/neovim',
-        as = 'rose-pine',
+        name = 'rose-pine',
         lazy = false,
         priority = 1000,
         config = function()

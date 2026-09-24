@@ -6,6 +6,8 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+vim.opt.wrap = false
+
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
@@ -31,3 +33,11 @@ vim.opt.smartcase = true
 
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+-- Neovim detects .bashrc / .bash_aliases out of the box, but not these.
+vim.filetype.add({
+    filename = {
+        [".bash_fns"] = "bash",
+        [".path_fns"] = "sh",
+    },
+})
